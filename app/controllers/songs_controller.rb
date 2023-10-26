@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   def all_songs
-    render json: { message: "hi" }
+    @songs = Song.all
+    render :index
   end
 end
